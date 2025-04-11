@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiMemoir</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/notebook.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="index-body">
+<header>
+    <div class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/notebook.png" alt="icon">DigiMemoir</a>
+            </div>
+            <ul class="navbar">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="interest.html">Interest</a></li>
+            </ul>
+            <a href="bookus.html" class="bookbtn">Book Us</a>
+        </div>
+        <div class="toggle"><i class="fa-solid fa-bars"></i></div>
+    </div>
+
+    <div class="dropdown_menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Interest</a></li>
+        <li><a href="#" class="bookbtn">Book Us</a></li>
+    </div>
+</header>
+
+        <div class="wrap">
+            <img src="images/img1.png" alt="walking">
+            <div class="text-box">
+            <h1>DISCOVER,</h1>
+            <h1>NAVIGATE & <br> CREATE</h1>
+            <h4>with Sheand & Kathleen</h4>
+            <p>Join us on this journey through a creative and engaging <br>website, where stories come to life, insights spark new <br>ideas, and inspiration fuels your passions. </p>
+            <a href="about.html">Get to know us now!</a>
+            </div>
+        </div>
+
+<script>
+    const toggleBtn = document.querySelector('.toggle')
+    const toggleBtnIcon = document.querySelector('.toggle i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
+</script>
+</body>
+</html>
